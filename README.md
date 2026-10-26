@@ -12,7 +12,7 @@ Portfolio von Dulidan Studios plus eigene Seite für **Politics AI**. Reines HTM
 /assets/js/main.js    Alle Features der Portfolio-Seite (Vanilla JS)
 /assets/fonts/        Space Grotesk + JetBrains Mono (OFL, selbst gehostet)
 /assets/img/          Logo (WebP), Icons, Open-Graph-Bilder
-CNAME, robots.txt, sitemap.xml, site.webmanifest, favicon.ico, apple-touch-icon.png
+robots.txt, sitemap.xml, site.webmanifest, favicon.ico, apple-touch-icon.png
 ```
 
 ## Lokal starten
@@ -26,15 +26,9 @@ Wichtig: über einen Server öffnen, nicht per Doppelklick (`file://`), weil die
 
 ## Deployment
 
-**IONOS (aktueller Hoster laut Datenschutzerklärung):** Den kompletten Ordnerinhalt (ohne `.git`, `README.md`, `OFFICIAL`) per SFTP oder Webspace-Explorer in das Root-Verzeichnis der Domain hochladen. Fertig, kein Build nötig.
+**Alternativ IONOS:** Den kompletten Ordnerinhalt (ohne `.git`, `README.md`, `OFFICIAL`) per SFTP oder Webspace-Explorer in das Root-Verzeichnis der Domain hochladen. Fertig, kein Build nötig.
 
-**GitHub Pages:**
-1. Repo → Settings → Pages → Source: „Deploy from a branch“, Branch `main`, Ordner `/ (root)`.
-2. Die Datei `CNAME` enthält `dulidan-studios.com`. Unter Settings → Pages → Custom domain dieselbe Domain eintragen, „Enforce HTTPS“ aktivieren.
-3. DNS beim Domain-Anbieter:
-   - `A`-Records für `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - `CNAME` für `www`: `short1106.github.io`
-4. Achtung: Wenn die Seite weiter bei IONOS läuft, die `CNAME`-Datei einfach ignorieren (sie stört dort nicht). Hosting-Angabe in `/datenschutz/` anpassen, falls du wechselst.
+**GitHub Pages (aktiv):** Jeder Merge nach `main` wird automatisch veröffentlicht. Die Domain `dulidan-studios.com` ist in den Repo-Einstellungen unter Settings → Pages hinterlegt, deshalb liegt bewusst keine `CNAME`-Datei im Repo.
 
 **Netlify:** Ordner per Drag & Drop auf app.netlify.com ziehen oder Repo verbinden (Build command leer, Publish directory `/`). Domain unter „Domain management“ hinzufügen.
 
@@ -87,7 +81,7 @@ Wichtig: über einen Server öffnen, nicht per Doppelklick (`file://`), weil die
 | Buch | Echtes Cover, selbst gewählter Kurzauszug („Kurzauszug folgt“) |
 | Kontakt | LinkedIn-URL, Discord-Link, optional Formular-Endpoint |
 | Politics AI | `PLAY_URL`; Text im „Spielen“-Overlay („Zugang anfragen:“) ist nicht Teil der Textvorgabe, bitte bestätigen |
-| Datenschutz | Hosting-Angabe prüfen (IONOS vs. GitHub Pages/Netlify) |
+| Datenschutz | Hosting-Angabe auf GitHub Pages umstellen (steht noch IONOS) |
 | Politics AI | Datenschutz-Overlay steht wie vorgegeben auf „Wird ergänzt“ |
 
 ## Bewusste Entscheidungen
